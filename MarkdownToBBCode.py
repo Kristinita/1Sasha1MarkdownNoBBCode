@@ -60,7 +60,7 @@ class MarkdowntobbcodeCommand(sublime_plugin.TextCommand):
 		# Bold and italic
 		#
 		s = re.sub(r"_{2}([\s\S]+?)_{2}", "[b]\\1[/b]", s)  # __Bold__
-		s = re.sub(r"_([^_]+?)_", "[i]\\1[/i]", s)   		# _Italic_ Needs hack (?<=\s), because _ symbol often use in URLs
+		s = re.sub(r"_([^_]+?)_", "[i]\\1[/i]", s)   	    # _Italic_ Needs hack (?<=\s), because _ symbol often use in URLs
 		s = re.sub(r"\*{2}([\s\S]+?)\*{2}", "[b]\\1[/b]", s)# **Bold**
 		s = re.sub(r"\*([^\*]+?)\*", "[i]\\1[/i]", s)       # *Italic*.
 		#
